@@ -1,5 +1,5 @@
 import smtplib
-from email import encoders, message_from_binary_file
+from email import encoders
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
