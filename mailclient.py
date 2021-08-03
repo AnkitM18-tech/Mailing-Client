@@ -6,7 +6,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
 #Creating server connection
-server = smtplib.SMTP('smtp.gmail.com', 25)
+server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 
 server.ehlo()  
 
