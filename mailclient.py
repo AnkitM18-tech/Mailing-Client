@@ -12,16 +12,20 @@ server.ehlo()
 
 server.login('email', 'password')
 
+#assigning the multiple parts of mail like sender,recepient,subject
 message = MIMEMultipart()
 message["from"] = "Sender"
 message["to"] = "Recepient"
 message["Subject"] = "Subject Line"
 
+#Opening the file and reading the message to be sent
 with open('message.txt', 'r') as f:
     msg = f.read()
 
+#Attaching the text to mail
 message.attach(MIMEText(msg, 'plain'))
 
+#Attaching the image file to mail
 filename = 'image.jpg'
 attachment = open(filename, 'rb')
 
